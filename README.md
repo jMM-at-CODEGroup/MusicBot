@@ -40,7 +40,8 @@ This process will allow you to bypass the YouTube restrictions and ensure smooth
 
 ---
 
-## 🚀 Deploy on Heroku 
+## 🚀 Deploy on Heroku
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/CyberPixelPro/AviaxMusic)
 
 ---
@@ -48,6 +49,7 @@ This process will allow you to bypass the YouTube restrictions and ensure smooth
 ### 🔧 Quick Setup
 
 1. **Upgrade & Update:**
+
    ```bash
    sudo apt-get update && sudo apt-get upgrade -y
    ```
@@ -72,22 +74,28 @@ This process will allow you to bypass the YouTube restrictions and ensure smooth
    ```bash
    pip3 install -U -r requirements.txt
    ```
-7. **Create .env  with sample.env**
+7. **Create .env with sample.env**
+
    ```bash
    cp sample.env .env
    ```
+
    - Edit .env with your vars
+
 8. **Editing Vars:**
+
    ```bash
    vi .env
    ```
+
    - Edit .env with your values.
    - Press `I` button on keyboard to start editing.
-   - Press `Ctrl + C`  once you are done with editing vars and type `:wq` to save .env or `:qa` to exit editing.
+   - Press `Ctrl + C` once you are done with editing vars and type `:wq` to save .env or `:qa` to exit editing.
+
 9. **Installing tmux**
-    ```bash
-    sudo apt install tmux -y && tmux
-    ```
+   ```bash
+   sudo apt install tmux -y && tmux
+   ```
 10. **Run the Bot**
     ```bash
     bash start
@@ -99,14 +107,14 @@ This process will allow you to bypass the YouTube restrictions and ensure smooth
 
 The Aviax Music Bot offers a range of commands to enhance your music listening experience on Telegram:
 
-| Command                 | Description                                 |
-|-------------------------|---------------------------------------------|
-| `/play <song name>`     | Play the requested song.                    |
-| `/pause`                | Pause the currently playing song.           |
-| `/resume`               | Resume the paused song.                     |
-| `/skip`                 | Move to the next song in the queue.         |
-| `/stop`                 | Stop the bot and clear the queue.           |
-| `/queue`                | Display the list of songs in the queue.     |
+| Command             | Description                             |
+| ------------------- | --------------------------------------- |
+| `/play <song name>` | Play the requested song.                |
+| `/pause`            | Pause the currently playing song.       |
+| `/resume`           | Resume the paused song.                 |
+| `/skip`             | Move to the next song in the queue.     |
+| `/stop`             | Stop the bot and clear the queue.       |
+| `/queue`            | Display the list of songs in the queue. |
 
 For a full list of commands, use `/help` in [telegram](https://t.me/AviaxBeatzBot).
 
@@ -141,6 +149,16 @@ For more details, reach out us on telegram.
 
 ---
 
+### Investigation Notes
+
+- [Play workflow investigation](docs/investigations/play-workflow.md) - Framing for assessing regressions before changing `/play` ([chat log](ai-logs/2026/09/24/86413381-aa2f-455d-8861-f99d23d14b14/conversation.md)).
+- [Play workflow source boundary](docs/investigations/source-boundary.md) - Entry path and direct collaborators for the `/play` execution trace.
+- [Play workflow evidence map](docs/investigations/play-evidence-map.md) - Direct command-to-stream behavior, state transitions, risks, and evidence gaps.
+- [Play workflow corroboration](docs/investigations/play-corroboration.md) - Independent configuration, deployment, test, and history checks for the evidence map.
+- [Play workflow backlog](docs/investigations/play-backlog.md) - Three prioritized, evidence-backed investigation and modernization items.
+
+---
+
 ### 📜 License
 
 This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
@@ -150,5 +168,6 @@ This project is licensed under the MIT License. For more details, see the [LICEN
 ### 🙏 Acknowledgements
 
 Thanks to all the contributors, supporters, and users of the Aviax Music Bot. Your feedback and support keep us going!
+
 - [Yukki Music](https://github.com/TeamYukki/YukkiMusicBot) and [AnonXMusic](https://github.com/AnonymousX1025/AnonXMusic) For their Source Codes.
 - **Special Thanks** to [SPiDER 🇮🇳](https://github.com/Surendra9123) for invaluable assistance in resolving the IP ban issue.
