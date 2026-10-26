@@ -254,7 +254,7 @@ Before finalizing your `promptfiles` list, ask:
    ls .github/prompts/*<prompt-name>.prompt.md
    ```
 
-2. **Create if Missing**: If the promptfile doesn't exist, create it following the guidance in `#file:prompt-file.instructions.md`
+2. **Create if Missing**: Do not create a legacy promptfile. Use a workspace skill for reusable workflows.
 
 3. **Update Chat Mode**: Only reference existing or newly-created promptfiles in your chat mode's `promptfiles` list
 
@@ -269,7 +269,7 @@ needed_prompts:
 
 # Step 2: Create missing promptfiles
 New file: .github/prompts/custom-threat-model.prompt.md
-Following: #file:prompt-file.instructions.md
+Use a workspace skill for reusable workflows; do not create a legacy promptfile.
 
 # Step 3: Verify promptfile works
 Test the promptfile independently before adding to chat mode
@@ -312,7 +312,7 @@ missing:
 
 # Create missing promptfile
 # File: .github/prompts/compliance-check.prompt.md
-# Content: Follow prompt-file.instructions.md
+# Content: Use a workspace skill; do not create a legacy promptfile.
 
 # Final chat mode with all promptfiles available
 name: "security-analyzer"
@@ -335,14 +335,14 @@ promptfiles:
 ✅ **DO**:
 
 - Verify promptfile existence before referencing
-- Follow prompt-file.instructions.md for creation
+- Do not create a legacy promptfile; use a workspace skill for reusable workflows.
 - Test promptfiles independently
 - Use consistent, descriptive naming
 - Document promptfile purpose in chat mode instructions
 
 #### Promptfile Creation
 
-If you need to create a new promptfile, follow the guidance in `#file:prompt-file.instructions.md` for proper structure and location requirements.
+Do not create new legacy promptfiles. Use a workspace skill for reusable workflows.
 
 ## Content Structure (Inside `instructions:` field)
 
